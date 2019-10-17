@@ -125,6 +125,42 @@ class Сlipper extends Ships {
     }
 }
 
+abstract class Airs implements transport {
+    @Override
+    public void movingType() {
+        System.out.println("Flying");
+    }
+
+    @Override
+    public abstract void movingSound();
+
+    @Override
+    public abstract void movingForce();
+}
+
+class Helicopter extends Airs {
+    @Override
+    public void movingForce() {
+        System.out.println("Helix");
+    }
+
+    @Override
+    public void movingSound() {
+        System.out.println("Tr-tr-tr-tr");
+    }
+}
+
+class Glider extends Airs {
+    @Override
+    public void movingForce() {
+        System.out.println("Air");
+    }
+
+    @Override
+    public void movingSound() {
+        System.out.println("Leont'evsSong");
+    }
+
 
 //Реализовать доменную модель для средств передвижения.
 // Должен быть минимум 1 интерфейс,
